@@ -20,7 +20,7 @@ Criação de um sistema comercial para lojas de tênis programado em Java, para 
 - Execute o programa -->
 Devera ser feito o login previamente cadastrado no banco de dados, após o login, aparecera um menu com as funções do programa. A interação dentro do programa será realizada pelo funcionário dependendo da necessidade da loja.
 
-O funcionário irá poder cadastrar o novo cliente que esta realizando a compra na loja, para após isso conseguir realizar a venda do produto já cadastrado e que estara sendo mostrado no catálogo com intuito de efetuar a venda, salvando o cliente e o que o mesmo comprou.
+O funcionário irá poder cadastrar o novo cliente que esta realizando a compra na loja, para após isso conseguir realizar a venda do produto já cadastrado e que estara sendo mostrado no catálogo com intuito de efetuar a venda, salvando o cliente e o produto que o mesmo comprou.
 
 ## Desenvolvido por 
 - [João Pedro Gaeta](https://github.com/JPGaeta) 👨🏽‍🎓
