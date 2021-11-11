@@ -35,7 +35,7 @@ public class MENU extends javax.swing.JFrame {
         cadastro = new javax.swing.JButton();
         catalogo = new javax.swing.JButton();
         controle = new javax.swing.JButton();
-        relatorio = new javax.swing.JButton();
+        cadprodutos = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -97,13 +97,13 @@ public class MENU extends javax.swing.JFrame {
             }
         });
 
-        relatorio.setBackground(new java.awt.Color(255, 255, 255));
-        relatorio.setFont(new java.awt.Font("Courier New", 1, 12)); // NOI18N
-        relatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/Imagens/relatorio.png"))); // NOI18N
-        relatorio.setText("RELATÒRIO DE CONTROLE");
-        relatorio.addActionListener(new java.awt.event.ActionListener() {
+        cadprodutos.setBackground(new java.awt.Color(255, 255, 255));
+        cadprodutos.setFont(new java.awt.Font("Courier New", 1, 12)); // NOI18N
+        cadprodutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login/Imagens/relatorio.png"))); // NOI18N
+        cadprodutos.setText("CADASTRO DE PRODUTOS");
+        cadprodutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                relatorioActionPerformed(evt);
+                cadprodutosActionPerformed(evt);
             }
         });
 
@@ -122,7 +122,7 @@ public class MENU extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(26, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(relatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cadprodutos, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(controle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(catalogo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -148,7 +148,7 @@ public class MENU extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(relatorio)
+                .addComponent(cadprodutos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -266,7 +266,7 @@ public class MENU extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 44, Short.MAX_VALUE))
+                .addGap(0, 20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -294,21 +294,24 @@ public class MENU extends javax.swing.JFrame {
     private void cadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroActionPerformed
         cadastrocliente cadastro = new cadastrocliente();
         cadastro.setVisible(true);
+        dispose();
     }//GEN-LAST:event_cadastroActionPerformed
 
     private void catalogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_catalogoActionPerformed
         CatalogoProdutos Catalogo = new CatalogoProdutos();
         Catalogo.setVisible(true);
-        
+        dispose();
     }//GEN-LAST:event_catalogoActionPerformed
 
     private void controleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_controleActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_controleActionPerformed
 
-    private void relatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_relatorioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_relatorioActionPerformed
+    private void cadprodutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadprodutosActionPerformed
+         cadastroprodutos CadProd = new cadastroprodutos();
+         CadProd.setVisible(true);
+         dispose();
+    }//GEN-LAST:event_cadprodutosActionPerformed
 
     private void logoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutActionPerformed
         TELA login  = new TELA();
@@ -355,6 +358,7 @@ public class MENU extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.JButton cadastro;
+    private javax.swing.JButton cadprodutos;
     private javax.swing.JButton catalogo;
     private javax.swing.JButton controle;
     private javax.swing.JLabel jLabel1;
@@ -370,6 +374,5 @@ public class MENU extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JButton logout;
-    private javax.swing.JButton relatorio;
     // End of variables declaration//GEN-END:variables
 }
