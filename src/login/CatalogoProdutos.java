@@ -17,9 +17,15 @@ public class CatalogoProdutos extends javax.swing.JFrame {
 
         private void listarProdutos(produto Produtos){
         this.conectar.conectaBanco();
-        
+        boolean deuCerto = false;
         String pesquisa = this.pesquisa.getText();
         int consultaProdutos = this.filtro.getSelectedIndex();
+        
+       // if(pesquisa == ("")){
+       //  JOptionPane.showMessageDialog(null, "Campo Vazio!");
+        // return;
+       // }
+
         switch(consultaProdutos){
             case 0://Tamanho
         try {
@@ -41,9 +47,10 @@ public class CatalogoProdutos extends javax.swing.JFrame {
             
             DefaultTableModel modelo = (DefaultTableModel)tabela.getModel();
             modelo.setNumRows(0);
-            
+            deuCerto = false;
             while(this.conectar.getResultSet().next()){
-                modelo.addRow(new Object[]{this.conectar.getResultSet().getString("codigo"),
+                deuCerto = true;
+                        modelo.addRow(new Object[]{this.conectar.getResultSet().getString("codigo"),
                                            this.conectar.getResultSet().getString("modelo"),
                                            this.conectar.getResultSet().getString("marca"),
                                            this.conectar.getResultSet().getString("tamanho"),
@@ -52,10 +59,10 @@ public class CatalogoProdutos extends javax.swing.JFrame {
                                            this.conectar.getResultSet().getString("preco")
               });                          
            }
-       //     System.out.println(this.conectar.getResultSet());
-       //   if(this.conectar.getResultSet() == null){
-       //   JOptionPane.showMessageDialog(null, "Produto não encontrado!");
-       //  }
+            
+            if(deuCerto == false){
+            JOptionPane.showMessageDialog(null, "Produto não encontrado!");
+         }
            
         } catch (Exception e) {            
             System.out.println("Erro ao consultar Produto " +  e.getMessage());
@@ -81,14 +88,15 @@ public class CatalogoProdutos extends javax.swing.JFrame {
                  + " FROM"
                      + " produtos "
                  + " WHERE"
-                     + " modelo = '" + pesquisa + "'"
+                     + " modelo like '" + pesquisa + "%'"
                 + ";"
             );
             
             DefaultTableModel modelo = (DefaultTableModel)tabela.getModel();
             modelo.setNumRows(0);
-            
+            deuCerto = false;
             while(this.conectar.getResultSet().next()){
+                deuCerto = true;
                 modelo.addRow(new Object[]{this.conectar.getResultSet().getString("codigo"),
                                            this.conectar.getResultSet().getString("modelo"),
                                            this.conectar.getResultSet().getString("marca"),
@@ -96,12 +104,12 @@ public class CatalogoProdutos extends javax.swing.JFrame {
                                            this.conectar.getResultSet().getString("cor"),
                                            this.conectar.getResultSet().getString("quantidade"),
                                            this.conectar.getResultSet().getString("preco")
-              });                          
+              });     
            }
-       //     System.out.println(this.conectar.getResultSet());
-       //   if(this.conectar.getResultSet() == null){
-       //   JOptionPane.showMessageDialog(null, "Produto não encontrado!");
-       //  }
+           
+            if(deuCerto == false){
+            JOptionPane.showMessageDialog(null, "Produto não encontrado!");
+         }
            
         } catch (Exception e) {            
             System.out.println("Erro ao consultar Produto " +  e.getMessage());
@@ -126,14 +134,14 @@ public class CatalogoProdutos extends javax.swing.JFrame {
                  + " FROM"
                      + " produtos "
                  + " WHERE"
-                     + " marca = '" + pesquisa + "'"
-                + ";"
+                     + " marca like '" + pesquisa + "%'"
             );
             
             DefaultTableModel modelo = (DefaultTableModel)tabela.getModel();
             modelo.setNumRows(0);
-            
+            deuCerto = false;
             while(this.conectar.getResultSet().next()){
+                deuCerto = true;
                 modelo.addRow(new Object[]{this.conectar.getResultSet().getString("codigo"),
                                            this.conectar.getResultSet().getString("modelo"),
                                            this.conectar.getResultSet().getString("marca"),
@@ -143,10 +151,9 @@ public class CatalogoProdutos extends javax.swing.JFrame {
                                            this.conectar.getResultSet().getString("preco")
               });                          
            }
-       //     System.out.println(this.conectar.getResultSet());
-       //   if(this.conectar.getResultSet() == null){
-       //   JOptionPane.showMessageDialog(null, "Produto não encontrado!");
-       //  }
+            if(deuCerto == false){
+            JOptionPane.showMessageDialog(null, "Produto não encontrado!");
+         }
            
         } catch (Exception e) {            
             System.out.println("Erro ao consultar Produto " +  e.getMessage());
@@ -177,8 +184,9 @@ public class CatalogoProdutos extends javax.swing.JFrame {
             
             DefaultTableModel modelo = (DefaultTableModel)tabela.getModel();
             modelo.setNumRows(0);
-            
+            deuCerto = false;
             while(this.conectar.getResultSet().next()){
+                deuCerto = true;
                 modelo.addRow(new Object[]{this.conectar.getResultSet().getString("codigo"),
                                            this.conectar.getResultSet().getString("modelo"),
                                            this.conectar.getResultSet().getString("marca"),
@@ -188,10 +196,9 @@ public class CatalogoProdutos extends javax.swing.JFrame {
                                            this.conectar.getResultSet().getString("preco")
               });                          
            }
-       //     System.out.println(this.conectar.getResultSet());
-       //   if(this.conectar.getResultSet() == null){
-       //   JOptionPane.showMessageDialog(null, "Produto não encontrado!");
-       //  }
+            if(deuCerto == false){
+            JOptionPane.showMessageDialog(null, "Produto não encontrado!");
+         }
            
         } catch (Exception e) {            
             System.out.println("Erro ao consultar Produto " +  e.getMessage());
