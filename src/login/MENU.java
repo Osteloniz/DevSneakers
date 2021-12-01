@@ -304,7 +304,9 @@ public class MENU extends javax.swing.JFrame {
     }//GEN-LAST:event_catalogoActionPerformed
 
     private void controleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_controleActionPerformed
-        // TODO add your handling code here:
+       Vendas venda = new Vendas();
+       venda.setVisible(true);
+       dispose();
     }//GEN-LAST:event_controleActionPerformed
 
     private void cadprodutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadprodutosActionPerformed

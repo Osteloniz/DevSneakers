@@ -41,7 +41,7 @@ public class CatalogoProdutos extends javax.swing.JFrame {
                  + " FROM"
                      + " produtos "
                  + " WHERE"
-                     + " tamanho = '" + pesquisa + "'"
+                     + " tamanho LIKE '" + pesquisa + "%'"
                 + ";"
             );
             
@@ -178,7 +178,7 @@ public class CatalogoProdutos extends javax.swing.JFrame {
                  + " FROM"
                      + " produtos "
                  + " WHERE"
-                     + " cor = '" + pesquisa + "'"
+                     + " cor like '" + pesquisa + "%'"
                 + ";"
             );
             

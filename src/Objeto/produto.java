@@ -1,6 +1,7 @@
 package Objeto;
 public class produto {
      //atributos
+    private String id = "";
     private String codigo = "";
     private String marca = "";
     private String tamanho ="";
@@ -12,6 +13,10 @@ public class produto {
     private String pesquisa = "";
     
     //GET e SET
+     public String getid() {
+        return id;
+    }
+    
     public String getcodigo() {
         return codigo;
     }
@@ -43,7 +48,10 @@ public class produto {
     public String getpesquisa(){
         return pesquisa;
     }
-
+    
+    public void setid(String id) {
+        this.id = id;
+    }
     public void setcodigo(String codigo) {
         this.codigo = codigo;
     }
